@@ -20,6 +20,10 @@
     margin: 0;
     padding: 0;
   }
+
+  .svg-nav:hover {
+    color: pink;
+  }
   
   main {
     margin-left: 7rem;
