@@ -183,6 +183,42 @@
           <h1>MTGSquad - DevLog[0]</h1>
           <p>Welcome to the MTGSquad Dev-log, this is a place where there is a new post each day, and the old ones are moving down and down and down, so go cry if you missed one. <i>it'll be hard to find an old one!</i></p>
 
+          <article class="8">
+            <h2>BYOB - Log[7]</h2>
+            <p>Did you know that building discord bots is super easy? Well of course it is! You just need to know javascript and you need to have node installed on your computer, go ahead and install discord.js with <code>npm i discord.js</code> into your working directory, now, create a index.js file (make sure your npm project is already initialized!), and then just go ahead and paste the following into it!
+            <br>
+            <code>
+              const Discord = require('discord.js');
+const client = new Discord.Client();
+
+const { token, prefix } = require('config.json');
+
+client.on('ready', async () => {
+    await console.log('bot up')
+});
+
+client.on('message', msg => {
+    const mesg = msg.content;
+
+    if(mesg === `${prefix}help`) {
+        msg.channel.send('this is a help command')
+    }
+});
+
+client.login(token);
+            </code>
+            <br>
+            Now make a file called config.json and put this inside:
+            <br>
+            <code>
+              {
+                "token": "discord bot token",
+                "prefix": "!"
+              }
+            </code>
+            </p>
+          </article>
+
           <article class="7">
             <h2>Easily earn money from your website! - Log[6]</h2>
             <p>Ever thought how to earn money from your website? well, its quite easy! Just go over to <a href="https://arc.io">arc</a> and get started, set up the widget, get the service worker setup, and thats pretty much it, set your paypal email and wait for a little bit, you payout has to get approved, it may take some time, but once approved, you can easily earn money based on the visitors on your site, now you may wonder what actually is arc? Arc is a peer to peer CDN, and the visitors on your site contribute bandwith to the cdn, and with that you earn money, and you get access to the arc cdn as well.</p>
